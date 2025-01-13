@@ -1,0 +1,370 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Счетчик очков</string>
+
+    <string name="common_under_development">Эта функция находится в стадии разработки</string>
+    <string name="common_something_went_wrong">Что-то пошло не так</string>
+    <string name="common_got_it">Понятно</string>
+    <string name="common_cancel">Отмена</string>
+
+    <string name="intro_welcome">Добро пожаловать</string>
+    <string name="intro_description">Сделайте снимок настольной игры, и наше приложение рассчитает финальный счет, используя технологию распознавания изображений.
+        Забудте о ручном подсчет очков и получайте каждый раз точные результаты.</string>
+
+    <string name="games_title">Игры</string>
+    <string name="games_catan">Колонизаторы</string>
+    <string name="games_carcassonne">Каркассон</string>
+    <string name="games_wingspan">Крылья</string>
+    <string name="games_scythe">Серп</string>
+    <string name="games_agricola">Агрикола</string>
+    <string name="games_everdell">Эверделл</string>
+    <string name="games_concordia">Concordia</string>
+    <string name="games_citadels">Цитадели</string>
+    <string name="games_blueberry_forest">Черничный лес</string>
+    <string name="games_hedgehog_cemetery">Кладбище ёжиков</string>
+
+    <string name="coming_soon_title">В разработке</string>
+    <string name="coming_soon_description">Мы рады сообщить, что поддержка этой игры уже в разработке! Она станет доступна совсем скоро.
+        Подпишитесь, чтобы быть в числе первых, кто узнает об этом, – мы уведомим вас, как только всё будет готово!</string>
+    <string name="coming_soon_subscribe">Подписаться</string>
+    <string name="coming_soon_subscribed">Вы подписаны</string>
+
+    <string name="camera_processing">Обработка…</string>
+    <string name="camera_processing_failed">Ошибка обработки</string>
+    <string name="camera_retry">Повторить</string>
+
+    <string name="sharing_text">Привет! Зацени приложение %s в Google Play: %s</string>
+
+    <string name="stream_live">ПРЯМОЙ ЭФИР</string>
+    <string name="stream_thousands_viewers_count">%s,%s тыс.</string>
+    <string name="stream_add_comment">Добавьте комментарий…</string>
+    <string name="stream_question_title">Вопрос</string>
+    <string name="stream_filter_not_available">Этот фильтр недоступен</string>
+
+    <string name="required_camera_permisseon_title">Пожалуйста, разрешите %s доступ к камере</string>
+    <string name="required_camera_permisseon_body">Это позволит сделать фото игры и узнать итоговый счёт.
+        Выбор в любое время можно изменить в настройках устройства.</string>
+    <string name="settings">Настройки</string>
+
+    <string name="do_you_like">Вам нравится приложение %s?</string>
+    <string name="help_us_improve">Пожалуйста, помогите нам улучшить %s, поделившись своим отзывом</string>
+    <string name="do_not_ask">Больше не спрашивать</string>
+    <string name="feedback_no">Нет</string>
+    <string name="feedback_yes">Да</string>
+
+    <string name="preparation_edit_photo">Изменить фото</string>
+    <string name="preparation_username">Имя пользователя</string>
+    <string name="preparation_username_hint">user_name</string>
+    <string name="preparation_viewer_count">Количество зрителей</string>
+    <string name="preparation_start_live">Начать стрим</string>
+
+    <string name="crop_image_next">Далее</string>
+
+    <string name="donation_title">Поддержите %s</string>
+    <string name="donation_descriptio">Это приложение создано независимым разработчиком без внешней финансовой поддержки. Каждый вклад имеет большое значение, и у вас есть возможность повлиять на развитие этого проекта.</string>
+    <string name="donation_donate">Пожертвовать %s</string>
+    <string name="donation_success">Успешно</string>
+    <string name="donation_ok">ОК</string>
+
+    <string name="stream_join_requests_title">Запросы на присоединение</string>
+    <string name="stream_join_requests_body">Запросов пока нет</string>
+    <string name="stream_join_requests_description">Здесь показываются запросы на роль соорганизатора.</string>
+
+    <string name="stream_invite_title">Отправте приглашение</string>
+    <string name="stream_invite_body">Приглашение недоступно</string>
+    <string name="stream_invite_description">Когда кто-то присоединяется к комнате, этот прямой эфир становится доступен всем, кто может смотреть прямые эфиры этого человека.</string>
+
+    <string name="stream_questions_title">Вопросы</string>
+    <string name="stream_questions_body">Вопросов пока нет</string>
+    <string name="stream_questions_description">Все зрители могут отправлять и видеть здесь вопросы.</string>
+    <string name="stream_questions_tap_to_answer">Нажмите на вопрос, чтобы ответить</string>
+    <string name="stream_questions_answered">Отвеченные вопросы</string>
+    <string name="stream_questions_everyone_watching">Все, кто смотрит, увидят его на экране.</string>
+    <string name="stream_questions_delete">Удалить</string>
+    <string name="stream_questions_report">Пожаловаться</string>
+
+    <string name="stream_direct_title">Поделитесь</string>
+    <string name="stream_direct_body">Поделиться недоступно</string>
+    <string name="stream_direct_description">Нет возможности отправить этот прямой эфир.</string>
+
+    <string-array name="one_letter_comments" tools:ignore="InconsistentArrays">
+        <item>А</item>
+        <item>У</item>
+        <item>И</item>
+        <item>О</item>
+        <item>Е</item>
+        <item>Э</item>
+        <item>Ф</item>
+        <item>К</item>
+        <item>Ш</item>
+        <item>М</item>
+        <item>Ы</item>
+        <item>Р</item>
+        <item>+</item>
+        <item>)</item>
+        <item>-</item>
+        <item>(</item>
+        <item>!</item>
+    </string-array>
+
+    <string-array name="two_letter_comments" tools:ignore="InconsistentArrays">
+        <item>Оу</item>
+        <item>Ой</item>
+        <item>Эй</item>
+        <item>Ух</item>
+        <item>Ай</item>
+        <item>Йо</item>
+        <item>Ох</item>
+        <item>Эй</item>
+        <item>Ах</item>
+        <item>Уи</item>
+        <item>Фу</item>
+        <item>Да</item>
+        <item>Оп</item>
+        <item>Ау</item>
+        <item>Ля</item>
+        <item>Ло</item>
+        <item>Хм</item>
+        <item>По</item>
+        <item>На</item>
+        <item>Ур</item>
+        <item>Уф</item>
+        <item>Бл</item>
+        <item>Эм</item>
+        <item>Ку</item>
+    </string-array>
+
+    <string-array name="three_letter_comments" tools:ignore="InconsistentArrays">
+        <item>Вау</item>
+        <item>Ура</item>
+        <item>Опа</item>
+        <item>Пох</item>
+        <item>Нах</item>
+        <item>Нах</item>
+        <item>Ого</item>
+        <item>Упс</item>
+        <item>Ага</item>
+        <item>Сок</item>
+        <item>Хах</item>
+        <item>Хох</item>
+        <item>Лол</item>
+        <item>Кек</item>
+        <item>Бля</item>
+        <item>Бли</item>
+        <item>Поп</item>
+        <item>Угу</item>
+        <item>Айс</item>
+        <item>Эйс</item>
+        <item>Гуд</item>
+        <item>Фан</item>
+        <item>Шок</item>
+        <item>Таю</item>
+        <item>Ору</item>
+        <item>Где</item>
+    </string-array>
+
+    <string-array name="one_word_comment" tools:ignore="InconsistentArrays">
+        <item>Браво</item>
+        <item>Опачки</item>
+        <item>Афигеть</item>
+        <item>Класс</item>
+        <item>Офигенно</item>
+        <item>Прекрасно</item>
+        <item>Супер</item>
+        <item>Бомба</item>
+        <item>Шикарно</item>
+        <item>Ладно</item>
+        <item>Невероятно</item>
+        <item>Круто</item>
+        <item>Интересно</item>
+        <item>Здорово</item>
+        <item>Чудеса</item>
+        <item>Брависсимо</item>
+        <item>Фантастика</item>
+        <item>Восхитительно</item>
+        <item>Замечательно</item>
+        <item>Удивительно</item>
+        <item>Идеально</item>
+        <item>Молодец</item>
+        <item>Отлично</item>
+        <item>Отпад</item>
+        <item>Эпик</item>
+        <item>Легко</item>
+        <item>Блеск</item>
+        <item>Огонь</item>
+        <item>Офигеть</item>
+        <item>Превосходно</item>
+        <item>Умница</item>
+        <item>Идея</item>
+        <item>Оригинально</item>
+        <item>Кринж</item>
+        <item>Писец</item>
+        <item>Генг</item>
+        <item>Бэнг</item>
+        <item>Ку ку</item>
+        <item>Теку</item>
+        <item>Кайф</item>
+        <item>Каеф</item>
+        <item>Кайфуем</item>
+        <item>Сасный</item>
+        <item>Кекаем</item>
+        <item>Плиз</item>
+    </string-array>
+
+    <string-array name="long_comments" tools:ignore="InconsistentArrays">
+        <item>Вот это да</item>
+        <item>Ничего себе</item>
+        <item>Ну и ну</item>
+        <item>Вот это круто</item>
+        <item>Вот это поворот</item>
+        <item>Вот это мощь</item>
+        <item>Вот это штука</item>
+        <item>О, господи</item>
+        <item>Вот это даа</item>
+        <item>Замечательный стрим</item>
+        <item>Смешные моменты</item>
+        <item>Поддерживаю вас</item>
+        <item>Ждем новых видео</item>
+        <item>Крутой контент</item>
+        <item>Подписался сразу</item>
+        <item>Энергия зашкаливает</item>
+        <item>Спасибо за ответ</item>
+        <item>Успехов впереди</item>
+        <item>Ваш стиль</item>
+        <item>Расскажите о себе</item>
+        <item>Моменты смеха</item>
+        <item>Любимые игры</item>
+        <item>Смеюсь над фэйлами</item>
+        <item>Очень вдохновляет</item>
+        <item>Ждем новых эмоций</item>
+        <item>Как подготавливаетесь</item>
+        <item>Ваши реакции</item>
+        <item>Смотрим вас</item>
+        <item>Классный контент, так держать</item>
+        <item>На твоих стримах всегда весело, спасибо</item>
+        <item>Спасибо за полезные советы, пригодились</item>
+        <item>Твои реакции просто смешные, улыбаюсь</item>
+        <item>Твоя энергия заразительна, молодец</item>
+        <item>Твои рассказы интересные, продолжай в том же духе</item>
+        <item>Твой контент всегда поднимает настроение</item>
+        <item>Твой оптимизм вдохновляет, так держать</item>
+        <item>Твои стримы всегда увлекательные, жду новых</item>
+        <item>Спасибо за ответы на вопросы, это ценно</item>
+        <item>Отличный контент, продолжай в том же духе</item>
+        <item>Замечательная атмосфера на стриме, всегда приятно с тобой</item>
+        <item>Спасибо за полезные советы, они мне действительно помогли</item>
+        <item>Твои реакции на игровые моменты просто смешные, смеюсь в голос</item>
+        <item>Энергия, которую ты приносишь в каждый стрим, просто заразительна</item>
+        <item>Очень интересно слушать твои истории, продолжай делиться</item>
+        <item>Смотрю тебя уже давно, и каждый раз ты меня удивляешь новым контентом</item>
+        <item>Как тебе удается поддерживать такой позитивный настрой? Это вдохновляет</item>
+        <item>Твои тематические стримы всегда такие увлекательные, жду следующего</item>
+        <item>Спасибо за ответы на вопросы зрителей, это придаёт стриму дополнительную ценность</item>
+        <item>Твой контент просто взрывает, продолжай в том же духе</item>
+        <item>Атмосфера на твоих стримах просто ошеломляет, всегда рад тебе</item>
+        <item>Спасибо за ценные советы, они мне действительно помогли</item>
+        <item>Твои реакции на игровые моменты - просто смех да и только</item>
+        <item>Твоя энергия передается каждому зрителю, это просто круто</item>
+        <item>Твои истории всегда интересны, продолжай делиться впечатлениями</item>
+        <item>Твой контент каждый раз заставляет меня улыбаться и радоваться</item>
+        <item>Как тебе удается поддерживать такой позитивный настрой? Это вдохновляет</item>
+        <item>Твои тематические стримы всегда приносят удовольствие, жду новых</item>
+        <item>Спасибо за ответы на вопросы зрителей, это делает стрим еще интереснее</item>
+    </string-array>
+
+    <string-array name="question_comments">
+        <item>Как день?</item>
+        <item>Как дела?</item>
+        <item>Как настроение?</item>
+        <item>Что тебя вдохновляет?</item>
+        <item>Чем ты любишь заниматься в свободное время?</item>
+        <item>Какие у тебя хобби?</item>
+        <item>Какой последний сериал смотрел?</item>
+        <item>Какое последнее мероприятие или событие тебе запомнилось?</item>
+        <item>Что тебе больше всего нравится в вашей работе/учебе?</item>
+        <item>Как выходные?</item>
+        <item>Какая твоя супер способность?</item>
+        <item>Какой навык хотел бы освоить в ближайшем будущем?</item>
+        <item>Какой твой любимый сериал или фильм сейчас?</item>
+        <item>Слушал что-нибудь крутое недавно?</item>
+        <item>Какую музыку ты слушаешь?</item>
+        <item>Чем ты занимаешься по вечерам?</item>
+        <item>В какие игры ты любишь играть?</item>
+        <item>Что будешь делать после стрима?</item>
+        <item>Кинотеатр или дома на диване?</item>
+        <item>Какой последний интересный факт ты узнал?</item>
+        <item>Есть ли что-то, о чем ты мечтаешь?</item>
+        <item>Ты когда-нибудь был на концерте?</item>
+        <item>О чем ты мечтаешь?</item>
+        <item>Ждешь какой-нибудь релиз?</item>
+        <item>В каком фильме ты бы хотел сняться?</item>
+        <item>Посоветуй книгу</item>
+        <item>Посоветуй сериальчик</item>
+        <item>Посоветуй веселый фильм</item>
+        <item>Посоветуй добрый фильм</item>
+        <item>Куда бы ты отправился в путешествие?</item>
+        <item>Какую книгу ты считаешь должен прочитать каждый?</item>
+        <item>Где бы ты хотел жить?</item>
+        <item>Как ты расслабляешься?</item>
+        <item>Что тебя мотивирует?</item>
+        <item>Какой фильм или книга оказали на тебя самое большое впечатление?</item>
+        <item>Если бы ты мог выбрать любую профессию, не беспокоясь о деньгах, что бы это было?</item>
+        <item>Есть ли что-то, что ты всегда хотел попробовать?</item>
+        <item>Любимое время года</item>
+        <item>Какое  событие оставило в твоей жизни наибольший след?</item>
+        <item>Какие три вещи ты бы взял с собой на необитаемый остров?</item>
+        <item>Хотел бы побывать в прошлом?</item>
+        <item>Ты любишь готовить?</item>
+        <item>Ты больше любить дарить или получать подарки?</item>
+        <item>Что делать в дождливый день?</item>
+        <item>Если бы ты мог изменить одно событие в своей жизни, что бы это было?</item>
+        <item>Опиши идеальный день</item>
+        <item>Какое твоё самое счастливое воспоминание из детства?</item>
+        <item>Что тебя больше всего мотивирует каждый день?</item>
+        <item>Что мотивирует тебя вставать по утрам?</item>
+        <item>Если бы ты мог получить ответ на любой вопрос, какой бы вопрос ты задал?</item>
+        <item>Что самое главное в жизни?</item>
+        <item>Кем ты хотел стать, когда вырастешь?</item>
+        <item>Какой твой любимый праздник?</item>
+        <item>Какое самое необычное блюдо ты когда-либо пробовал?</item>
+        <item>Какую страну или культуру ты находишь наиболее интересной и почему?</item>
+        <item>У тебя есть любимое место?</item>
+        <item>Есть цели на год?</item>
+        <item>Если бы ты мог выбрать любой талант, какой бы ты хотел иметь?</item>
+        <item>У тебя есть талисман?</item>
+        <item>Какой жанр музыки или фильмов ты считаешь наиболее недооценённым?</item>
+        <item>Какое твое любимое приложение?</item>
+        <item>Какой твой любимый сайт?</item>
+        <item>Ты любишь рисковать?</item>
+        <item>У тебя есть домашние животные?</item>
+        <item>Опиши себя тремя словами</item>
+        <item>Ты больше любишь лето или зиму?</item>
+        <item>Какой язык ты хотел бы знать? Почему?</item>
+        <item>Какое твое любимое место?</item>
+        <item>У тебя есть домашние растения?</item>
+        <item>Что тебе больше всего нравится в том месте, где ты живешь сейчас?</item>
+        <item>Расскажи про свои хобби</item>
+        <item>Если бы ты мог встретить любого персонажа из книги/фильма, кто бы это был?</item>
+        <item>Какой совет ты хотел бы дать каждому человеку на Земле?</item>
+        <item>Что ты предпочитаешь: приключение или отдых?</item>
+        <item>Ты жаворонок или сова?</item>
+        <item>Какой лучший подарок ты когда-либо получал?</item>
+        <item>Что ты думаешь о космических путешествиях?</item>
+        <item>Кофе или чай?</item>
+        <item>Книги или фильмы?</item>
+        <item>Собаки или кошки?</item>
+        <item>Пицца или суши?</item>
+        <item>Фильмы дома или в кино?</item>
+        <item>Ты любишь вечеринки?</item>
+        <item>Тебе больше нравятся фильмы или сериалы?</item>
+        <item>Какие жанры фильмов тебе нравятся?</item>
+        <item>Какие музыкальные жанры ты любишь?</item>
+        <item>Ты больше любишь горячий или холодный климат?</item>
+        <item>Ты любишь больше активный отдых или релакс?</item>
+        <item>Предпочитаешь ли ты сладкое или соленое?</item>
+        <item>Предпочитаешь ли ты планировать заранее или жить спонтанно?</item>
+        <item>Настольные игры или видеоигры?</item>
+        <item>Любишь ли ты больше проводить время в компании или наедине?</item>
+        <item>Ты любишь кофе?</item>
+    </string-array>
+
+</resources>

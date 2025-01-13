@@ -1,0 +1,357 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Score Counter</string>
+
+    <string name="common_under_development">This feature is under development</string>
+    <string name="common_something_went_wrong">Something went wrong</string>
+    <string name="common_got_it">Got it</string>
+    <string name="common_cancel">Cancel</string>
+
+    <string name="intro_welcome">Welcome</string>
+    <string name="intro_description">Snap a photo of your board game, and our app calculates the final score using image recognition technology.
+        Simplify your game nights by eliminating manual tallying and enjoy accurate, hassle-free scoring every time.</string>
+
+    <string name="games_title">Games</string>
+    <string name="games_catan">Catan</string>
+    <string name="games_carcassonne">Carcassonne</string>
+    <string name="games_wingspan">Wingspan</string>
+    <string name="games_scythe">Scythe</string>
+    <string name="games_agricola">Agricola</string>
+    <string name="games_concordia">Concordia</string>
+    <string name="games_everdell">Everdell</string>
+    <string name="games_citadels">Citadels</string>
+    <string name="games_blueberry_forest">Blueberry forest</string>
+    <string name="games_hedgehog_cemetery">Hedgehog cemetery</string>
+
+    <string name="coming_soon_title">Coming Soon!</string>
+    <string name="coming_soon_description">We’re excited to announce that support for this game is on the way!
+        It will be available soon. Be the first to know — subscribe now, and we’ll notify you as soon as it’s ready!</string>
+    <string name="coming_soon_subscribe">Subscribe</string>
+    <string name="coming_soon_subscribed">Subscribed</string>
+
+    <string name="camera_processing">Processing…</string>
+    <string name="camera_processing_failed">Processing failed</string>
+    <string name="camera_retry">Retry</string>
+
+    <string name="sharing_text">Hey! Check out %s app on Google Play: %s</string>
+
+    <string name="stream_live">LIVE</string>
+    <string name="stream_thousands_viewers_count">%s.%sK</string>
+    <string name="stream_add_comment">Add comment…</string>
+    <string name="stream_question_title">Question</string>
+    <string name="stream_filter_not_available">This filter is not available</string>
+
+    <string name="required_camera_permisseon_title">Please allow %s to access your camera</string>
+    <string name="required_camera_permisseon_body">
+        This will allow you to take a photo of the game and find out the final score.
+        You can change this at any time in your device settings.</string>
+    <string name="settings">Settings</string>
+
+    <string name="do_you_like">Do you like %s app?</string>
+    <string name="help_us_improve">Please help us improve %s by sharing your feedback</string>
+    <string name="do_not_ask">Please don\'t ask anymore</string>
+    <string name="feedback_yes">Yes</string>
+    <string name="feedback_no">No</string>
+
+    <string name="preparation_edit_photo">Edit photo</string>
+    <string name="preparation_username">Username</string>
+    <string name="preparation_username_hint">user_name</string>
+    <string name="preparation_viewer_count">Viewer count</string>
+    <string name="preparation_start_live">Start Live</string>
+
+    <string name="crop_image_next">Next</string>
+
+    <string name="donation_title">Support %s</string>
+    <string name="donation_descriptio">This app is created by an indie developer without external financial support. Every contribution matters greatly, and you have the power to influence the development of this project.</string>
+    <string name="donation_donate">Donate %s</string>
+    <string name="donation_success">Success</string>
+    <string name="donation_ok">OK</string>
+
+    <string name="stream_join_requests_title">Requests to join</string>
+    <string name="stream_join_requests_body">No Requests Yet</string>
+    <string name="stream_join_requests_description">Requests to co-host show up here.</string>
+
+    <string name="stream_invite_title">Invite to join</string>
+    <string name="stream_invite_body">Invite not available</string>
+    <string name="stream_invite_description">When someone joins, anyone who can see their live videos can also watch this one.</string>
+
+    <string name="stream_questions_title">Questions</string>
+    <string name="stream_questions_body">No Questions Yet</string>
+    <string name="stream_questions_description">Anyone watching can send and see questions here.</string>
+    <string name="stream_questions_tap_to_answer">Tap a Question to Answer</string>
+    <string name="stream_questions_answered">Answered questions</string>
+    <string name="stream_questions_everyone_watching">Everyone watching will see it on screen.</string>
+    <string name="stream_questions_delete">Delete</string>
+    <string name="stream_questions_report">Report</string>
+
+    <string name="stream_direct_title">Direct</string>
+    <string name="stream_direct_body">Direct not available</string>
+    <string name="stream_direct_description">There is no way to send this live stream.</string>
+
+    <string-array name="one_letter_comments" tools:ignore="InconsistentArrays">
+        <item>S</item>
+        <item>O</item>
+        <item>R</item>
+        <item>U</item>
+        <item>H</item>
+        <item>F</item>
+        <item>Z</item>
+        <item>+</item>
+        <item>)</item>
+        <item>-</item>
+        <item>(</item>
+        <item>!</item>
+    </string-array>
+
+    <string-array name="two_letter_comments" tools:ignore="InconsistentArrays">
+        <item>Hi</item>
+        <item>No</item>
+        <item>Ok</item>
+        <item>By</item>
+        <item>Up</item>
+        <item>Go</item>
+        <item>On</item>
+        <item>Up</item>
+        <item>It</item>
+        <item>Me</item>
+        <item>Do</item>
+        <item>Ye</item>
+        <item>Up</item>
+        <item>So</item>
+        <item>Hi</item>
+        <item>Oh</item>
+        <item>Be</item>
+        <item>If</item>
+        <item>As</item>
+        <item>Of</item>
+        <item>Hm</item>
+    </string-array>
+
+    <string-array name="three_letter_comments" tools:ignore="InconsistentArrays">
+        <item>Wow</item>
+        <item>Yes</item>
+        <item>Nop</item>
+        <item>Fun</item>
+        <item>Hey</item>
+        <item>Hmm</item>
+        <item>Lol</item>
+        <item>Wow</item>
+        <item>Yep</item>
+        <item>Bye</item>
+        <item>Try</item>
+        <item>Win</item>
+        <item>Yay</item>
+        <item>Got</item>
+        <item>Top</item>
+        <item>Run</item>
+        <item>Joy</item>
+        <item>Nah</item>
+        <item>New</item>
+        <item>Fix</item>
+        <item>How</item>
+        <item>Low</item>
+        <item>Mad</item>
+        <item>Zen</item>
+        <item>Fly</item>
+        <item>Woo</item>
+        <item>Raw</item>
+        <item>Cut</item>
+        <item>Sun</item>
+        <item>Hot</item>
+        <item>Cry</item>
+        <item>Now</item>
+    </string-array>
+
+    <string-array name="one_word_comment" tools:ignore="InconsistentArrays">
+        <item>Awesome</item>
+        <item>Cool</item>
+        <item>Nice</item>
+        <item>Great</item>
+        <item>Amazing</item>
+        <item>Fantastic</item>
+        <item>Super</item>
+        <item>Excellent</item>
+        <item>Love</item>
+        <item>Beautiful</item>
+        <item>Impressive</item>
+        <item>Fantastic</item>
+        <item>Bravo</item>
+        <item>Epic</item>
+        <item>Sweet</item>
+        <item>Outstanding</item>
+        <item>Terrific</item>
+        <item>Incredible</item>
+        <item>Fabulous</item>
+        <item>Perfect</item>
+        <item>Wonderful</item>
+        <item>Splendid</item>
+        <item>Majestic</item>
+        <item>Stunning</item>
+        <item>Charming</item>
+        <item>Vibrant</item>
+        <item>Gorgeous</item>
+        <item>Dazzling</item>
+        <item>Astonishing</item>
+        <item>Delightful</item>
+        <item>Exquisite</item>
+        <item>Superb</item>
+        <item>Spectacular</item>
+        <item>Captivating</item>
+        <item>Stellar</item>
+        <item>Breathtaking</item>
+    </string-array>
+
+    <string-array name="long_comments" tools:ignore="InconsistentArrays">
+        <item>This is incredible</item>
+        <item>You did an amazing job</item>
+        <item>So much fun to watch</item>
+        <item>Absolutely fantastic content</item>
+        <item>I\'m loving every moment</item>
+        <item>You\'re truly talented</item>
+        <item>This is pure entertainment</item>
+        <item>Thanks for making my day</item>
+        <item>You never disappoint, always great</item>
+        <item>Your energy is contagious</item>
+        <item>I\'m hooked, can\'t stop watching</item>
+        <item>Incredible skills on display</item>
+        <item>You always bring joy</item>
+        <item>You\'re making a difference</item>
+        <item>What a delightful surprise</item>
+        <item>You\'re a true inspiration</item>
+        <item>Such a positive vibe here</item>
+        <item>Keep up the good work</item>
+        <item>You\'ve got a fan for life</item>
+        <item>Your creativity is outstanding</item>
+        <item>This is so entertaining</item>
+        <item>I\'m impressed, keep it up</item>
+        <item>You\'re a source of inspiration</item>
+        <item>I can\'t get enough of this</item>
+        <item>Thanks for brightening my day</item>
+        <item>Your content is always top-notch</item>
+        <item>You bring so much joy to us</item>
+        <item>Absolutely love your style</item>
+        <item>Such a great atmosphere here</item>
+        <item>You make everything more fun</item>
+        <item>This is absolutely captivating</item>
+        <item>You have a unique charm</item>
+        <item>Your dedication is admirable</item>
+        <item>This is a masterpiece</item>
+        <item>Your passion shines through</item>
+        <item>You\'ve created something special</item>
+        <item>Thanks for the positive vibes</item>
+        <item>Your efforts are truly appreciated</item>
+        <item>This is a highlight of my day</item>
+        <item>You\'ve got a special talent</item>
+        <item>Consistently engaging content, your creativity brings joy to every viewer</item>
+        <item>Your storytelling captivates; each video is a memorable, delightful adventure</item>
+        <item>Top-tier quality, your dedication shines in every video you produce</item>
+        <item>You\'re a source of inspiration, turning creativity into a masterpiece</item>
+        <item>Authentic, entertaining, and positively impactful — your content is exceptional</item>
+        <item>Intriguing narratives, your videos are a breath of fresh creativity</item>
+        <item>Captivating charisma, your presence makes every moment thoroughly enjoyable</item>
+        <item>Skillful storytelling, your videos leave a lasting and positive impression</item>
+        <item>Consistent excellence, your content elevates the online experience for everyone</item>
+        <item>Creative brilliance, your unique approach sets you apart in every aspect</item>
+        <item>Entertaining escapades, your videos are a delightful journey of discovery</item>
+        <item>Enthusiastic and engaging, your content brightens even the gloomiest days</item>
+        <item>Your work radiates passion, making each piece truly extraordinary and memorable</item>
+        <item>Artistic flair, your videos are a testament to your creative prowess</item>
+        <item>Relatable and authentic, your content feels like a genuine connection</item>
+    </string-array>
+
+    <string-array name="question_comments">
+        <item>How\'s your day?</item>
+        <item>How are you doing?</item>
+        <item>How are you feeling?</item>
+        <item>What inspires you?</item>
+        <item>What do you like to do in your free time?</item>
+        <item>What hobbies do you have?</item>
+        <item>What was the last series you watched?</item>
+        <item>What was the last event or occasion you remember?</item>
+        <item>What do you like most about your work/studies?</item>
+        <item>How was your weekend?</item>
+        <item>What\'s your superpower?</item>
+        <item>What skill would you like to learn in the near future?</item>
+        <item>What\'s your favorite series or movie right now?</item>
+        <item>Have you listened to anything cool recently?</item>
+        <item>What music do you listen to?</item>
+        <item>What do you do in the evenings?</item>
+        <item>What games do you like to play?</item>
+        <item>What will you do after the stream?</item>
+        <item>Cinema or couch at home?</item>
+        <item>What\'s the last interesting fact you learned?</item>
+        <item>Is there something you dream about?</item>
+        <item>Have you ever been to a concert?</item>
+        <item>What do you dream about?</item>
+        <item>Are you waiting for any releases?</item>
+        <item>In which movie would you like to act?</item>
+        <item>Recommend a book</item>
+        <item>Recommend a series</item>
+        <item>Recommend a fun movie</item>
+        <item>Recommend a kind movie</item>
+        <item>Where would you go on a trip?</item>
+        <item>What book do you think everyone should read?</item>
+        <item>Where would you like to live?</item>
+        <item>How do you relax?</item>
+        <item>What motivates you?</item>
+        <item>Which movie or book had the greatest impact on you?</item>
+        <item>If you could choose any profession without worrying about money, what would it be?</item>
+        <item>Is there something you\'ve always wanted to try?</item>
+        <item>Favorite season?</item>
+        <item>What event left the biggest mark on your life?</item>
+        <item>What three things would you take with you to a deserted island?</item>
+        <item>Would you like to visit the past?</item>
+        <item>Do you like to cook?</item>
+        <item>Do you prefer giving or receiving gifts?</item>
+        <item>What to do on a rainy day?</item>
+        <item>If you could change one event in your life, what would it be?</item>
+        <item>Describe the perfect day</item>
+        <item>What is your happiest childhood memory?</item>
+        <item>What motivates you the most every day?</item>
+        <item>What motivates you to get up in the morning?</item>
+        <item>If you could get an answer to any question, what would you ask?</item>
+        <item>What\'s the most important thing in life?</item>
+        <item>What did you want to be when you grew up?</item>
+        <item>What\'s your favorite holiday?</item>
+        <item>What\'s the most unusual dish you\'ve ever tried?</item>
+        <item>Which country or culture do you find most interesting and why?</item>
+        <item>Do you have a favorite place?</item>
+        <item>Do you have goals for the year?</item>
+        <item>If you could choose any talent, what would you want?</item>
+        <item>Do you have a talisman?</item>
+        <item>What genre of music or movies do you think is most underrated?</item>
+        <item>What\'s your favorite app?</item>
+        <item>What\'s your favorite website?</item>
+        <item>Do you like to take risks?</item>
+        <item>Do you have pets?</item>
+        <item>Describe yourself in three words</item>
+        <item>Do you prefer summer or winter?</item>
+        <item>What language would you like to know? Why?</item>
+        <item>What is your favorite place?</item>
+        <item>Do you have house plants?</item>
+        <item>What do you like most about the place where you live now?</item>
+        <item>Tell about your hobbies</item>
+        <item>If you could meet any character from a book/movie, who would it be?</item>
+        <item>What advice would you give to every person on Earth?</item>
+        <item>Do you prefer adventure or relaxation?</item>
+        <item>Are you a morning person or a night owl?</item>
+        <item>What\'s the best gift you\'ve ever received?</item>
+        <item>What do you think about space travel?</item>
+        <item>Coffee or tea?</item>
+        <item>Books or movies?</item>
+        <item>Dogs or cats?</item>
+        <item>Pizza or sushi?</item>
+        <item>Movies at home or in the cinema?</item>
+        <item>Do you like parties?</item>
+        <item>Do you prefer movies or series?</item>
+        <item>What movie genres do you like?</item>
+        <item>What music genres do you like?</item>
+        <item>Do you prefer hot or cold weather?</item>
+        <item>Do you prefer active leisure or relaxation?</item>
+        <item>Do you prefer sweet or salty?</item>
+        <item>Do you prefer to plan in advance or live spontaneously?</item>
+        <item>Board games or video games?</item>
+        <item>Do you prefer to spend time in company or alone?</item>
+        <item>Do you like coffee?</item>
+    </string-array>
+
+</resources>
