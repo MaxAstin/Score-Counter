@@ -15,7 +15,7 @@ android {
 
     defaultConfig {
         applicationId = "com.github.maxastin.scorecounter"
-        minSdk = 27
+        minSdk = 24
         targetSdk = 35
         versionCode = 2
         versionName = "0.0.2"
