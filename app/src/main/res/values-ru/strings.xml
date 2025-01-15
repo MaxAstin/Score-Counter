@@ -29,7 +29,8 @@
     <string name="coming_soon_subscribed">Вы подписаны</string>
 
     <string name="camera_processing">Обработка…</string>
-    <string name="camera_processing_failed">Ошибка обработки</string>
+    <string name="camera_processing_failed_title">Не удалось распознать игру</string>
+    <string name="camera_processing_failed_description">Убедитесь, что игра четко видна на фотографии</string>
     <string name="camera_retry">Повторить</string>
 
     <string name="sharing_text">Привет! Зацени приложение %s в Google Play: %s</string>

@@ -29,7 +29,8 @@
     <string name="coming_soon_subscribed">Subscribed</string>
 
     <string name="camera_processing">Processing…</string>
-    <string name="camera_processing_failed">Processing failed</string>
+    <string name="camera_processing_failed_title">Game not recognized</string>
+    <string name="camera_processing_failed_description">Make sure the game is clearly visible in the photo</string>
     <string name="camera_retry">Retry</string>
 
     <string name="sharing_text">Hey! Check out %s app on Google Play: %s</string>

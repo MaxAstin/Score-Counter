@@ -47,6 +47,7 @@ import com.github.maxastin.scorecounter.R
 import com.github.maxastin.scorecounter.common.ui.clickableWithoutIndication
 import com.github.maxastin.scorecounter.common.ui.components.button.ScoreCounterDialogButton
 import com.github.maxastin.scorecounter.common.ui.preview.BooleanProvider
+import com.github.maxastin.scorecounter.common.ui.preview.LocalePreview
 import com.github.maxastin.scorecounter.common.ui.theme.ScoreCounterTheme
 import com.github.maxastin.scorecounter.common.util.getCameraProvider
 import java.io.ByteArrayOutputStream
@@ -109,6 +110,7 @@ private fun Content(
                 }
                 Column(
                     modifier = Modifier
+                        .padding(32.dp)
                         .align(Alignment.Center)
                         .clip(RoundedCornerShape(16.dp))
                         .background(color = ScoreCounterTheme.colors.background)
@@ -118,21 +120,27 @@ private fun Content(
                 ) {
                     if (state.failed) {
                         Text(
-                            text = stringResource(R.string.camera_processing_failed),
+                            text = stringResource(R.string.camera_processing_failed_title),
                             color = ScoreCounterTheme.colors.important,
                             style = ScoreCounterTheme.typography.titleMedium,
                         )
+                        Text(
+                            text = stringResource(R.string.camera_processing_failed_description),
+                            color = ScoreCounterTheme.colors.onBackground,
+                            style = ScoreCounterTheme.typography.bodyMedium,
+                        )
                         Row(
-                            modifier = Modifier.align(Alignment.End),
                             horizontalArrangement = spacedBy(8.dp)
                         ) {
                             ScoreCounterDialogButton(
+                                modifier = Modifier.weight(1f),
                                 text = stringResource(R.string.common_cancel),
                                 onClick = {
                                     navController.popBackStack()
                                 }
                             )
                             ScoreCounterDialogButton(
+                                modifier = Modifier.weight(1f),
                                 text = stringResource(R.string.camera_retry),
                                 backgroundColor = ScoreCounterTheme.colors.primary,
                                 textColor = ScoreCounterTheme.colors.onSurface,
@@ -260,7 +268,7 @@ private fun CameraContentPreview() {
     )
 }
 
-@ComposePreview
+@LocalePreview
 @Composable
 private fun PictureContentPreview(@PreviewParameter(BooleanProvider::class) failed: Boolean) {
     Content(
