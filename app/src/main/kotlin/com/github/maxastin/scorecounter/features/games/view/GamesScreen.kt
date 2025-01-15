@@ -92,8 +92,10 @@ private fun GamesContent(
     ) {
         Text(
             modifier = Modifier
-                .padding(top = 32.dp)
-                .padding(horizontal = 32.dp)
+                .padding(
+                    horizontal = 32.dp,
+                    vertical = 16.dp
+                )
                 .fillMaxWidth(),
             text = stringResource(id = R.string.games_title),
             style = ScoreCounterTheme.typography.titleLarge.bold,
