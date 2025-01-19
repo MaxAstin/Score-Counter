@@ -2,7 +2,6 @@ package com.github.maxastin.scorecounter.features.main
 
 import android.Manifest.permission.CAMERA
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
@@ -147,10 +146,5 @@ class MainActivity : ComponentActivity() {
         } else {
             requestCameraPermissionLauncher.launch(CAMERA)
         }
-    }
-
-    private fun showToast(message: String) {
-        Toast.makeText(this@MainActivity, message, Toast.LENGTH_SHORT)
-            .show()
     }
 }

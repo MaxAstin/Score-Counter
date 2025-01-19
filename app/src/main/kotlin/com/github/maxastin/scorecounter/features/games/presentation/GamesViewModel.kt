@@ -44,6 +44,10 @@ class GamesViewModel @Inject constructor(
                     sendEvent(Games.Event.CheckCamera)
                 }
             }
+            is Games.Action.ShareClick -> {
+                // TODO send analytics event
+                sendEvent(Games.Event.ShowShareDialog)
+            }
         }
     }
 
