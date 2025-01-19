@@ -5,74 +5,73 @@
 
     <aapt:attr name="android:drawable">
         <vector
-            android:width="240dp"
-            android:height="240dp"
-            android:viewportWidth="240"
-            android:viewportHeight="240">
-            <path
-                android:pathData="M0,0h240v240h-240z"
-                android:fillColor="#ffffff"/>
-            <path
-                android:name="first"
-                android:pathData="M72,72m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0"
-                android:fillAlpha="0"
-                android:fillColor="#0195F7"/>
-            <path
-                android:name="one"
-                android:pathData="M66,64L72,60V84"
-                android:strokeLineJoin="round"
-                android:strokeWidth="4"
-                android:fillColor="#00000000"
-                android:strokeAlpha="0"
-                android:strokeColor="#EAF7FF"
-                android:strokeLineCap="round"/>
-            <path
-                android:name="second"
-                android:pathData="M168,72m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0"
-                android:fillAlpha="0"
-                android:fillColor="#0195F7"/>
-            <path
-                android:name="two"
-                android:pathData="M162.47,63.66C162.8,62.89 163.28,62.2 163.89,61.63C164.5,61.05 165.22,60.61 166.01,60.34C166.8,60.06 167.64,59.95 168.48,60.02C169.31,60.09 170.12,60.33 170.86,60.72C171.59,61.12 172.24,61.67 172.75,62.33C173.26,63 173.63,63.76 173.83,64.57C174.03,65.38 174.05,66.23 173.91,67.05C173.76,67.88 173.44,68.66 172.98,69.35V69.35L162,84V84H174"
-                android:strokeLineJoin="round"
-                android:strokeWidth="4"
-                android:fillColor="#00000000"
-                android:strokeAlpha="0"
-                android:strokeColor="#EAF7FF"
-                android:strokeLineCap="round"/>
-            <path
-                android:name="third"
-                android:pathData="M72,168m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0"
-                android:fillAlpha="0"
-                android:fillColor="#0195F7"/>
-            <path
-                android:name="three"
-                android:pathData="M66,156H78L71,166C72.15,166 73.29,166.29 74.3,166.83C75.32,167.37 76.18,168.15 76.82,169.11C77.46,170.07 77.85,171.17 77.97,172.31C78.08,173.46 77.91,174.62 77.47,175.68C77.03,176.74 76.33,177.68 75.44,178.41C74.55,179.14 73.5,179.64 72.37,179.87C71.24,180.09 70.07,180.03 68.97,179.7C67.87,179.36 66.87,178.76 66.05,177.95"
-                android:strokeLineJoin="round"
-                android:strokeWidth="4"
-                android:fillColor="#00000000"
-                android:strokeAlpha="0"
-                android:strokeColor="#EAF7FF"
-                android:strokeLineCap="round"/>
-            <path
-                android:name="fourth"
-                android:pathData="M168,168m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0"
-                android:fillAlpha="0"
-                android:fillColor="#FA980A"/>
-            <path
-                android:name="crown"
-                android:pathData="M156.55,178.47C156.58,178.62 156.64,178.75 156.73,178.87C156.82,178.99 156.93,179.1 157.06,179.17C157.19,179.25 157.33,179.29 157.48,179.31C157.63,179.33 157.78,179.32 157.93,179.28C164.52,177.46 171.48,177.46 178.07,179.28C178.21,179.32 178.36,179.33 178.51,179.31C178.66,179.29 178.8,179.24 178.93,179.17C179.06,179.09 179.17,178.99 179.26,178.87C179.35,178.75 179.41,178.62 179.45,178.47L182.97,163.52C183.02,163.32 183.01,163.11 182.94,162.91C182.88,162.72 182.76,162.55 182.6,162.41C182.44,162.28 182.25,162.2 182.04,162.17C181.84,162.14 181.63,162.17 181.45,162.26L174.45,165.36C174.2,165.47 173.92,165.49 173.65,165.4C173.39,165.31 173.17,165.13 173.04,164.89L168.97,157.57C168.87,157.4 168.73,157.25 168.56,157.15C168.39,157.05 168.2,157 168,157C167.8,157 167.61,157.05 167.44,157.15C167.27,157.25 167.13,157.4 167.03,157.57L162.96,164.89C162.83,165.13 162.61,165.31 162.35,165.4C162.09,165.49 161.8,165.47 161.55,165.36L154.55,162.26C154.37,162.17 154.16,162.14 153.96,162.17C153.75,162.2 153.56,162.28 153.4,162.41C153.24,162.54 153.12,162.72 153.06,162.91C152.99,163.11 152.98,163.32 153.03,163.52L156.55,178.47Z"
-                android:strokeLineJoin="round"
-                android:strokeWidth="4"
-                android:fillColor="#00000000"
-                android:strokeAlpha="0"
-                android:strokeColor="#FFF6E9"
-                android:strokeLineCap="round"
-                tools:ignore="VectorPath" />
+            android:width="400dp"
+            android:height="400dp"
+            android:viewportWidth="400"
+            android:viewportHeight="400">
+
+            <group>
+                <path
+                    android:name="first_circle"
+                    android:fillAlpha="0"
+                    android:fillColor="#0195F7"
+                    android:pathData="M156.36,156.36m-36.36,0a36.36,36.36 0,1 1,72.73 0a36.36,36.36 0,1 1,-72.73 0" />
+                <path
+                    android:name="first_number"
+                    android:fillAlpha="0"
+                    android:fillColor="#EAF7FF"
+                    android:fillType="evenOdd"
+                    android:pathData="M157.22,143.85C157.81,144.17 158.18,144.78 158.18,145.46V167.27C158.18,168.28 157.37,169.09 156.36,169.09C155.36,169.09 154.55,168.28 154.55,167.27V148.85L151.92,150.6C151.08,151.16 149.95,150.93 149.4,150.1C148.84,149.26 149.07,148.13 149.9,147.58L155.36,143.94C155.91,143.57 156.63,143.54 157.22,143.85Z" />
+            </group>
+
+            <group>
+                <path
+                    android:name="second_circle"
+                    android:fillAlpha="0"
+                    android:fillColor="#0195F7"
+                    android:pathData="M243.64,156.36m-36.36,0a36.36,36.36 0,1 1,72.73 0a36.36,36.36 0,1 1,-72.73 0" />
+                <path
+                    android:name="second_number"
+                    android:fillAlpha="0"
+                    android:fillColor="#EAF7FF"
+                    android:fillType="evenOdd"
+                    android:pathData="M243.93,147.28C243.42,147.24 242.91,147.31 242.43,147.48C241.95,147.65 241.51,147.91 241.15,148.26C240.78,148.61 240.48,149.03 240.29,149.49C239.89,150.42 238.83,150.85 237.9,150.46C236.98,150.07 236.54,149 236.94,148.08C237.33,147.14 237.92,146.3 238.66,145.61C239.4,144.91 240.27,144.38 241.23,144.05C242.19,143.71 243.2,143.58 244.21,143.66C245.23,143.74 246.21,144.03 247.1,144.51C247.99,145 248.77,145.66 249.39,146.46C250.01,147.27 250.46,148.19 250.7,149.18C250.94,150.16 250.97,151.19 250.8,152.18C250.62,153.18 250.23,154.13 249.67,154.98L248.16,153.96L249.61,155.05L241.82,165.45H249.09C250.1,165.45 250.91,166.27 250.91,167.27C250.91,168.28 250.1,169.09 249.09,169.09H238.25C238.04,169.1 237.82,169.07 237.61,169C236.87,168.75 236.36,168.06 236.36,167.27V167.27C236.36,166.84 236.51,166.45 236.76,166.14L246.67,152.91C246.95,152.5 247.13,152.03 247.22,151.55C247.3,151.05 247.29,150.54 247.17,150.04C247.05,149.55 246.82,149.09 246.51,148.69C246.21,148.29 245.81,147.95 245.37,147.71C244.92,147.47 244.43,147.32 243.93,147.28Z"
+                    tools:ignore="VectorPath" />
+            </group>
+
+            <group>
+                <path
+                    android:name="third_circle"
+                    android:fillAlpha="0"
+                    android:fillColor="#0195F7"
+                    android:pathData="M156.36,243.64m-36.36,0a36.36,36.36 0,1 1,72.73 0a36.36,36.36 0,1 1,-72.73 0" />
+                <path
+                    android:name="third_number"
+                    android:fillAlpha="0"
+                    android:fillColor="#EAF7FF"
+                    android:fillType="evenOdd"
+                    android:pathData="M149.09,232.73C149.09,231.72 149.9,230.91 150.91,230.91H161.82C162.49,230.91 163.12,231.29 163.43,231.89C163.74,232.49 163.7,233.21 163.31,233.77L158.53,240.6C158.79,240.71 159.06,240.83 159.31,240.97C160.5,241.6 161.51,242.52 162.26,243.64C163.01,244.76 163.47,246.04 163.6,247.38C163.73,248.72 163.53,250.07 163.01,251.31C162.5,252.56 161.69,253.65 160.65,254.51C159.61,255.36 158.37,255.94 157.05,256.21C155.73,256.47 154.37,256.4 153.08,256.01C151.79,255.62 150.62,254.92 149.67,253.97C148.96,253.26 148.96,252.11 149.67,251.4C150.38,250.69 151.53,250.69 152.24,251.4C152.77,251.93 153.42,252.32 154.14,252.53C154.85,252.75 155.61,252.79 156.34,252.64C157.07,252.49 157.76,252.17 158.34,251.7C158.92,251.22 159.37,250.61 159.65,249.92C159.94,249.23 160.05,248.48 159.98,247.74C159.9,246.99 159.65,246.28 159.23,245.66C158.82,245.04 158.26,244.53 157.6,244.17C156.94,243.82 156.2,243.64 155.46,243.64C154.78,243.64 154.16,243.26 153.84,242.66C153.53,242.06 153.58,241.33 153.97,240.78L158.32,234.55H150.91C149.9,234.55 149.09,233.73 149.09,232.73Z"
+                    tools:ignore="VectorPath" />
+            </group>
+
+            <group>
+                <path
+                    android:name="fourth_circle"
+                    android:fillAlpha="0"
+                    android:fillColor="#FA980A"
+                    android:pathData="M243.64,243.64m-36.36,0a36.36,36.36 0,1 1,72.73 0a36.36,36.36 0,1 1,-72.73 0" />
+                <path
+                    android:name="fourth_crown"
+                    android:fillAlpha="0"
+                    android:fillColor="#FFF7EB"
+                    android:fillType="evenOdd"
+                    android:pathData="M243.64,231.82C243.13,231.82 242.64,231.95 242.21,232.21C241.77,232.46 241.41,232.83 241.17,233.27L237.83,239.27L232.15,236.75C231.67,236.54 231.14,236.46 230.62,236.54C230.1,236.61 229.61,236.82 229.21,237.16C228.8,237.49 228.5,237.93 228.33,238.43C228.16,238.93 228.14,239.46 228.26,239.98L231.45,253.57L231.46,253.58C231.54,253.95 231.71,254.3 231.93,254.6C232.16,254.91 232.44,255.17 232.77,255.36C233.1,255.55 233.46,255.68 233.84,255.73C234.22,255.77 234.6,255.75 234.96,255.65C240.63,254.08 246.63,254.08 252.3,255.64C252.67,255.74 253.05,255.77 253.42,255.72C253.8,255.68 254.17,255.55 254.49,255.36C254.82,255.16 255.11,254.91 255.34,254.6C255.56,254.3 255.72,253.95 255.81,253.58L255.81,253.57L259.02,239.98C259.14,239.47 259.11,238.93 258.94,238.43C258.78,237.93 258.47,237.49 258.07,237.16C257.66,236.82 257.17,236.61 256.65,236.54C256.13,236.46 255.6,236.54 255.12,236.75L249.44,239.27L246.1,233.27C245.86,232.83 245.5,232.46 245.07,232.21C244.63,231.95 244.14,231.82 243.64,231.82ZM243.64,236.31L240.65,241.69C240.3,242.31 239.74,242.77 239.07,242.99C238.4,243.22 237.68,243.18 237.03,242.9L232.17,240.74L234.8,251.93C240.6,250.47 246.67,250.47 252.46,251.93L255.1,240.74L250.24,242.9C249.6,243.18 248.87,243.22 248.2,242.99C247.53,242.77 246.97,242.31 246.63,241.69L243.64,236.31Z"
+                    tools:ignore="VectorPath" />
+            </group>
         </vector>
     </aapt:attr>
 
-    <target android:name="first">
+    <target android:name="first_circle">
         <aapt:attr name="android:animation">
             <objectAnimator
                 android:duration="1000"
@@ -82,77 +81,77 @@
         </aapt:attr>
     </target>
 
-    <target android:name="one">
+    <target android:name="first_number">
         <aapt:attr name="android:animation">
             <objectAnimator
                 android:duration="1000"
-                android:propertyName="strokeAlpha"
+                android:propertyName="fillAlpha"
                 android:valueFrom="0"
                 android:valueTo="1" />
         </aapt:attr>
     </target>
 
-    <target android:name="second">
+    <target android:name="second_circle">
         <aapt:attr name="android:animation">
             <objectAnimator
+                android:duration="1000"
+                android:propertyName="fillAlpha"
                 android:startOffset="200"
-                android:duration="1000"
-                android:propertyName="fillAlpha"
                 android:valueFrom="0"
                 android:valueTo="1" />
         </aapt:attr>
     </target>
 
-    <target android:name="two">
+    <target android:name="second_number">
         <aapt:attr name="android:animation">
             <objectAnimator
+                android:duration="1000"
+                android:propertyName="fillAlpha"
                 android:startOffset="200"
-                android:duration="1000"
-                android:propertyName="strokeAlpha"
                 android:valueFrom="0"
                 android:valueTo="1" />
         </aapt:attr>
     </target>
 
-    <target android:name="third">
+    <target android:name="third_circle">
         <aapt:attr name="android:animation">
             <objectAnimator
-                android:startOffset="400"
                 android:duration="1000"
                 android:propertyName="fillAlpha"
-                android:valueFrom="0"
-                android:valueTo="1" />
-        </aapt:attr>
-    </target>
-
-    <target android:name="three">
-        <aapt:attr name="android:animation">
-            <objectAnimator
                 android:startOffset="400"
-                android:duration="1000"
-                android:propertyName="strokeAlpha"
                 android:valueFrom="0"
                 android:valueTo="1" />
         </aapt:attr>
     </target>
 
-    <target android:name="fourth">
+    <target android:name="third_number">
         <aapt:attr name="android:animation">
             <objectAnimator
-                android:startOffset="600"
                 android:duration="1000"
                 android:propertyName="fillAlpha"
+                android:startOffset="400"
                 android:valueFrom="0"
                 android:valueTo="1" />
         </aapt:attr>
     </target>
 
-    <target android:name="crown">
+    <target android:name="fourth_circle">
         <aapt:attr name="android:animation">
             <objectAnimator
-                android:startOffset="600"
                 android:duration="1000"
-                android:propertyName="strokeAlpha"
+                android:propertyName="fillAlpha"
+                android:startOffset="600"
+                android:valueFrom="0"
+                android:valueTo="1" />
+        </aapt:attr>
+    </target>
+
+    <target android:name="fourth_crown">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="1000"
+                android:propertyName="fillAlpha"
+                android:startOffset="600"
                 android:valueFrom="0"
                 android:valueTo="1" />
         </aapt:attr>
