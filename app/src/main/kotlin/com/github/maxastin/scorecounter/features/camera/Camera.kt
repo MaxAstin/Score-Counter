@@ -14,6 +14,7 @@ interface Camera {
     sealed interface Action : Base.Action {
         data object ProcessImage : Action
         data object RetryClick : Action
+        data object CameraError : Action
     }
 
     object Event : Base.Event

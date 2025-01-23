@@ -74,7 +74,7 @@ fun CameraScreen(navController: NavHostController) {
             viewModel.onAction(Camera.Action.ProcessImage)
         },
         onCameraError = {
-            // TODO handle camera error
+            viewModel.onAction(Camera.Action.CameraError)
         },
         modifier = Modifier.fillMaxSize()
     )
