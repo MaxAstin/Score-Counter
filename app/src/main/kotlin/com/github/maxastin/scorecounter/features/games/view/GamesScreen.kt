@@ -101,11 +101,7 @@ private fun GamesContent(
     items: ImmutableList<GameItem>,
     onAction: (Games.Action) -> Unit
 ) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(ScoreCounterTheme.colors.background)
-    ) {
+    Column(modifier = Modifier.fillMaxSize()) {
         Box(
             modifier = Modifier
                 .padding(

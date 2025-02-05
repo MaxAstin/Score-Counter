@@ -2,7 +2,6 @@ package com.github.maxastin.scorecounter.features.comingsoon.view
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -80,11 +79,7 @@ private fun ComingSoonContent(
     state: ComingSoon.State,
     onAction: (ComingSoon.Action) -> Unit
 ) {
-    Column(
-        modifier = Modifier
-            .background(ScoreCounterTheme.colors.background)
-            .padding(32.dp)
-    ) {
+    Column(modifier = Modifier.padding(32.dp)) {
         Box {
             Icon(
                 modifier = Modifier
