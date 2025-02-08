@@ -11,7 +11,6 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.compose.animation.EnterTransition
 import androidx.compose.animation.ExitTransition
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
@@ -91,9 +90,7 @@ class MainActivity : ComponentActivity() {
 
     @Composable
     private fun AppContent(navController: NavHostController) {
-        Scaffold(
-            modifier = Modifier.background(ScoreCounterTheme.colors.background),
-        ) { padding ->
+        Scaffold(containerColor = ScoreCounterTheme.colors.background) { padding ->
             MainNavigation(
                 navController = navController,
                 modifier = Modifier.padding(padding)

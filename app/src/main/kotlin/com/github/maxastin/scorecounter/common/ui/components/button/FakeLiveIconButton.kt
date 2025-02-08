@@ -72,7 +72,7 @@ fun ScoreCounterIconButton(
                             shape = CircleShape
                         )
                         .padding(1.dp),
-                    containerColor = ScoreCounterTheme.colors.important,
+                    containerColor = ScoreCounterTheme.colors.negative,
                 )
             }
         }

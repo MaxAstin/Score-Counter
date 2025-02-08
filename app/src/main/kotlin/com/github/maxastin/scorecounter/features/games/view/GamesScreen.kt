@@ -152,7 +152,6 @@ private fun GameItem(
 ) {
     Column(
         modifier = modifier
-
             .clickableWithoutIndication {
                 onAction(Games.Action.GameClick(label = item.label))
             }
@@ -175,7 +174,7 @@ private fun GameItem(
                     Icon(
                         modifier = Modifier.size(24.dp),
                         painter = painterResource(R.drawable.ic_check_in_circle),
-                        tint = ScoreCounterTheme.colors.primary,
+                        tint = ScoreCounterTheme.colors.positive,
                         contentDescription = null,
                     )
                 }

@@ -122,7 +122,7 @@ private fun Content(
                     if (state.failed) {
                         Text(
                             text = stringResource(R.string.camera_processing_failed_title),
-                            color = ScoreCounterTheme.colors.important,
+                            color = ScoreCounterTheme.colors.negative,
                             style = ScoreCounterTheme.typography.titleMedium,
                         )
                         Text(
