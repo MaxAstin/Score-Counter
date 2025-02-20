@@ -49,7 +49,7 @@ import com.github.maxastin.scorecounter.shared.domain.model.GameLabel
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toPersistentList
 
-private const val GOOGLE_PLAY_LINK = "https://play.google.com/store/apps"
+private const val GOOGLE_PLAY_LINK = "https://play.google.com/store/apps/details?id=com.github.maxastin.scorecounter"
 
 @Composable
 fun GamesScreen(
