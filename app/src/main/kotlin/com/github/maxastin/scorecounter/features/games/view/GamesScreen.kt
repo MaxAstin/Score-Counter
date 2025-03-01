@@ -1,5 +1,7 @@
 package com.github.maxastin.scorecounter.features.games.view
 
+import android.content.Context
+import android.content.Intent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement.Absolute.spacedBy
@@ -20,9 +22,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
@@ -32,8 +36,9 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavHostController
 import com.github.maxastin.scorecounter.R
 import com.github.maxastin.scorecounter.common.navigation.NavigationRote
-import com.github.maxastin.scorecounter.common.ui.preview.LocalePreview
 import com.github.maxastin.scorecounter.common.ui.clickableWithoutIndication
+import com.github.maxastin.scorecounter.common.ui.components.button.ScoreCounterIconButton
+import com.github.maxastin.scorecounter.common.ui.preview.LocalePreview
 import com.github.maxastin.scorecounter.common.ui.theme.ScoreCounterTheme
 import com.github.maxastin.scorecounter.common.ui.theme.bold
 import com.github.maxastin.scorecounter.common.ui.util.Subscribe
@@ -43,6 +48,8 @@ import com.github.maxastin.scorecounter.features.games.presentation.GamesViewMod
 import com.github.maxastin.scorecounter.shared.domain.model.GameLabel
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toPersistentList
+
+private const val GOOGLE_PLAY_LINK = "https://play.google.com/store/apps/details?id=com.github.maxastin.scorecounter"
 
 @Composable
 fun GamesScreen(
@@ -58,18 +65,27 @@ fun GamesScreen(
         }
     }
 
+    val context = LocalContext.current
     viewModel.event.Subscribe { event ->
         when (event) {
+            Games.Event.CheckCamera -> {
+                onCameraRequired()
+            }
+
             is Games.Event.OpenComingSoon -> {
                 navController.navigate(
-                    NavigationRote.ComingSoon(
-                        label = event.label
-                    )
+                    NavigationRote.ComingSoon(label = event.label)
                 )
             }
 
-            is Games.Event.CheckCamera -> {
-                onCameraRequired()
+            Games.Event.ShowShareDialog -> {
+                context.showShareDialog(
+                    text = context.resources.getString(
+                        R.string.sharing_text,
+                        context.resources.getString(R.string.app_name),
+                        GOOGLE_PLAY_LINK
+                    )
+                )
             }
         }
     }
@@ -85,20 +101,30 @@ private fun GamesContent(
     items: ImmutableList<GameItem>,
     onAction: (Games.Action) -> Unit
 ) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(ScoreCounterTheme.colors.background)
-    ) {
-        Text(
+    Column(modifier = Modifier.fillMaxSize()) {
+        Box(
             modifier = Modifier
-                .padding(top = 32.dp)
-                .padding(horizontal = 32.dp)
-                .fillMaxWidth(),
-            text = stringResource(id = R.string.games_title),
-            style = ScoreCounterTheme.typography.titleLarge.bold,
-            textAlign = TextAlign.Center
-        )
+                .padding(
+                    horizontal = 32.dp,
+                    vertical = 16.dp
+                )
+                .fillMaxWidth()
+        ) {
+            Text(
+                modifier = Modifier.align(Alignment.Center),
+                text = stringResource(id = R.string.games_title),
+                style = ScoreCounterTheme.typography.titleLarge.bold
+            )
+            ScoreCounterIconButton(
+                modifier = Modifier.align(Alignment.CenterEnd),
+                iconId = R.drawable.ic_share,
+                contentDescription = "share",
+                onClick = {
+                    onAction(Games.Action.ShareClick)
+                }
+            )
+        }
+
         LazyVerticalGrid(
             modifier = Modifier
                 .fillMaxWidth()
@@ -126,7 +152,6 @@ private fun GameItem(
 ) {
     Column(
         modifier = modifier
-
             .clickableWithoutIndication {
                 onAction(Games.Action.GameClick(label = item.label))
             }
@@ -149,7 +174,7 @@ private fun GameItem(
                     Icon(
                         modifier = Modifier.size(24.dp),
                         painter = painterResource(R.drawable.ic_check_in_circle),
-                        tint = ScoreCounterTheme.colors.primary,
+                        tint = ScoreCounterTheme.colors.positive,
                         contentDescription = null,
                     )
                 }
@@ -163,6 +188,20 @@ private fun GameItem(
             style = ScoreCounterTheme.typography.titleMedium,
             textAlign = TextAlign.Center
         )
+    }
+}
+
+private fun Context.showShareDialog(text: String) {
+    try {
+        val intent = Intent().apply {
+            action = Intent.ACTION_SEND
+            type = "text/plain"
+            putExtra(Intent.EXTRA_TEXT, text)
+        }
+        val chooser = Intent.createChooser(intent, null)
+        startActivity(chooser)
+    } catch (exception: Exception) {
+        // TODO: handle exception
     }
 }
 

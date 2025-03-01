@@ -1,14 +1,16 @@
 package com.github.maxastin.scorecounter.features.welcome.view
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement.Absolute.spacedBy
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBars
+import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
@@ -27,8 +29,8 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavHostController
 import com.github.maxastin.scorecounter.R
 import com.github.maxastin.scorecounter.common.navigation.NavigationRote
-import com.github.maxastin.scorecounter.common.ui.preview.LocalePreview
 import com.github.maxastin.scorecounter.common.ui.components.button.ScoreCounterPrimaryButton
+import com.github.maxastin.scorecounter.common.ui.preview.LocalePreview
 import com.github.maxastin.scorecounter.common.ui.theme.ScoreCounterTheme
 import com.github.maxastin.scorecounter.common.ui.theme.bold
 import com.github.maxastin.scorecounter.features.welcome.presentation.Welcome
@@ -72,11 +74,7 @@ private fun IntroContent(
     onAction: (Welcome.Action) -> Unit
 ) {
     if (isChecked) {
-        Column(
-            modifier = Modifier
-                .background(ScoreCounterTheme.colors.background)
-                .padding(32.dp)
-        ) {
+        Column(modifier = Modifier.padding(32.dp)) {
             Column(
                 modifier = Modifier
                     .weight(1f)
@@ -107,7 +105,8 @@ private fun IntroContent(
             ScoreCounterPrimaryButton(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(top = 32.dp),
+                    .padding(top = 32.dp)
+                    .windowInsetsPadding(WindowInsets.statusBars),
                 text = stringResource(id = R.string.common_got_it),
                 onClick = {
                     onAction(Welcome.Action.NextClick)

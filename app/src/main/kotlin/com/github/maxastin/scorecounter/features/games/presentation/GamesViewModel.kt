@@ -1,6 +1,7 @@
 package com.github.maxastin.scorecounter.features.games.presentation
 
 import androidx.lifecycle.viewModelScope
+import com.github.maxastin.scorecounter.common.analytics.AnalyticsManager
 import com.github.maxastin.scorecounter.common.presentation.BaseViewModel
 import com.github.maxastin.scorecounter.features.games.domain.GetGamesUseCase
 import com.github.maxastin.scorecounter.shared.domain.model.Game
@@ -12,7 +13,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class GamesViewModel @Inject constructor(
-    private val getGamesUseCase: GetGamesUseCase
+    private val getGamesUseCase: GetGamesUseCase,
+    private val analyticsManager: AnalyticsManager,
 ) : BaseViewModel<Games.State, Games.Action, Games.Event>(
     initState = {
         Games.State(
@@ -37,12 +39,16 @@ class GamesViewModel @Inject constructor(
     override fun onAction(action: Games.Action) {
         when (action) {
             is Games.Action.GameClick -> {
-                // TODO send analytics event
+                analyticsManager.trackGameClick(action.label)
                 if (action.label.isReal) {
                     sendEvent(Games.Event.OpenComingSoon(action.label))
                 } else {
                     sendEvent(Games.Event.CheckCamera)
                 }
+            }
+            is Games.Action.ShareClick -> {
+                analyticsManager.trackShareClick()
+                sendEvent(Games.Event.ShowShareDialog)
             }
         }
     }

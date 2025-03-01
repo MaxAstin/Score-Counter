@@ -7,6 +7,7 @@ import com.github.maxastin.scorecounter.shared.domain.model.GameLabel
 interface ComingSoon {
 
     data class State(
+        val label: GameLabel?,
         @DrawableRes val image: Int?,
         val subscribed: Boolean
     ): Base.State
@@ -14,7 +15,7 @@ interface ComingSoon {
     sealed interface Action: Base.Action {
         data class Init(val label: GameLabel) : Action
         data object BackClick : Action
-        data class SubscribeClick(val label: GameLabel) : Action
+        data object SubscribeClick : Action
     }
 
     sealed interface Event: Base.Event {

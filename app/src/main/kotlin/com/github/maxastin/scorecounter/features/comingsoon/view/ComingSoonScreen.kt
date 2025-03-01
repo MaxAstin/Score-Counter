@@ -1,7 +1,7 @@
 package com.github.maxastin.scorecounter.features.comingsoon.view
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -53,6 +53,10 @@ fun ComingSoonScreen(
         }
     }
 
+    BackHandler {
+        onAction(ComingSoon.Action.BackClick)
+    }
+
     LaunchedEffect(Unit) {
         viewModel.onAction(ComingSoon.Action.Init(label = label))
     }
@@ -65,7 +69,6 @@ fun ComingSoonScreen(
     }
 
     ComingSoonContent(
-        label = label,
         state = state,
         onAction = onAction
     )
@@ -73,15 +76,10 @@ fun ComingSoonScreen(
 
 @Composable
 private fun ComingSoonContent(
-    label: GameLabel,
     state: ComingSoon.State,
     onAction: (ComingSoon.Action) -> Unit
 ) {
-    Column(
-        modifier = Modifier
-            .background(ScoreCounterTheme.colors.background)
-            .padding(32.dp)
-    ) {
+    Column(modifier = Modifier.padding(32.dp)) {
         Box {
             Icon(
                 modifier = Modifier
@@ -133,7 +131,7 @@ private fun ComingSoonContent(
             }.let { id ->
                 stringResource(id = id)
             },
-            onClick = { onAction(ComingSoon.Action.SubscribeClick(label = label)) },
+            onClick = { onAction(ComingSoon.Action.SubscribeClick) },
             enabled = !state.subscribed,
             startIcon = {
                 if (state.subscribed) {
@@ -154,8 +152,8 @@ private fun ComingSoonContent(
 fun ComingSoonScreenPreview(@PreviewParameter(BooleanProvider::class) subscribed: Boolean) {
     ScoreCounterTheme {
         ComingSoonContent(
-            label = GameLabel.CATAN,
             state = ComingSoon.State(
+                label = GameLabel.CATAN,
                 image = R.drawable.img_catan,
                 subscribed = subscribed
             ),

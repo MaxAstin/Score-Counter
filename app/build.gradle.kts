@@ -15,10 +15,10 @@ android {
 
     defaultConfig {
         applicationId = "com.github.maxastin.scorecounter"
-        minSdk = 27
+        minSdk = 24
         targetSdk = 35
-        versionCode = 1
-        versionName = "0.0.1"
+        versionCode = 10
+        versionName = "0.1.0"
         multiDexEnabled = true
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"

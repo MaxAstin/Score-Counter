@@ -1,17 +1,17 @@
 package com.github.maxastin.scorecounter.features.main
 
 import android.Manifest.permission.CAMERA
+import android.graphics.Color
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.ComponentActivity
+import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.compose.animation.EnterTransition
 import androidx.compose.animation.ExitTransition
-import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -20,6 +20,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.core.app.ActivityCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -54,6 +55,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
+        setupEdgeToEdge()
 
         super.onCreate(savedInstanceState)
 
@@ -88,11 +90,7 @@ class MainActivity : ComponentActivity() {
 
     @Composable
     private fun AppContent(navController: NavHostController) {
-        Scaffold(
-            modifier = Modifier
-                .statusBarsPadding()
-                .navigationBarsPadding()
-        ) { padding ->
+        Scaffold(containerColor = ScoreCounterTheme.colors.background) { padding ->
             MainNavigation(
                 navController = navController,
                 modifier = Modifier.padding(padding)
@@ -140,6 +138,19 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    private fun setupEdgeToEdge() {
+        enableEdgeToEdge(
+            navigationBarStyle = SystemBarStyle.auto(
+                Color.TRANSPARENT,
+                Color.TRANSPARENT
+            ),
+        )
+        WindowInsetsControllerCompat(window, window.decorView).apply {
+            isAppearanceLightStatusBars = true
+            isAppearanceLightNavigationBars = true
+        }
+    }
+
     private fun requestCameraPermission() {
         val isCameraPermissionDenied = ActivityCompat.shouldShowRequestPermissionRationale(this, CAMERA)
         if (isCameraPermissionDenied) {
@@ -147,10 +158,5 @@ class MainActivity : ComponentActivity() {
         } else {
             requestCameraPermissionLauncher.launch(CAMERA)
         }
-    }
-
-    private fun showToast(message: String) {
-        Toast.makeText(this@MainActivity, message, Toast.LENGTH_SHORT)
-            .show()
     }
 }

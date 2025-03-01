@@ -1,6 +1,7 @@
 package com.github.maxastin.scorecounter.features.comingsoon.presentation
 
 import androidx.lifecycle.viewModelScope
+import com.github.maxastin.scorecounter.common.analytics.AnalyticsManager
 import com.github.maxastin.scorecounter.common.presentation.BaseViewModel
 import com.github.maxastin.scorecounter.features.comingsoon.domain.GetGameUseCase
 import com.github.maxastin.scorecounter.features.comingsoon.domain.SubscribeOnGameUseCase
@@ -12,10 +13,12 @@ import javax.inject.Inject
 @HiltViewModel
 class ComingSoonViewModel @Inject constructor(
     private val getGameUseCase: GetGameUseCase,
-    private val subscribeOnGameUseCase: SubscribeOnGameUseCase
+    private val subscribeOnGameUseCase: SubscribeOnGameUseCase,
+    private val analyticsManager: AnalyticsManager,
 ) : BaseViewModel<ComingSoon.State, ComingSoon.Action, ComingSoon.Event>(
     initState = {
         ComingSoon.State(
+            label = null,
             image = null,
             subscribed = false,
         )
@@ -28,6 +31,7 @@ class ComingSoonViewModel @Inject constructor(
                 val game = getGameUseCase(label = action.label)
                 setState {
                     copy(
+                        label = action.label,
                         image = game.toGameItem().image,
                         subscribed = game.subscribed
                     )
@@ -35,16 +39,19 @@ class ComingSoonViewModel @Inject constructor(
             }
 
             ComingSoon.Action.BackClick -> {
-                // TODO send event
+                val label = state.value.label ?: return
+                analyticsManager.trackGoBackFromSoon(label)
                 sendEvent(ComingSoon.Event.NavigateBack)
             }
 
             is ComingSoon.Action.SubscribeClick -> {
+                val label = state.value.label ?: return
+                analyticsManager.trackSubscribeClick(label)
                 setState {
                     copy(subscribed = true)
                 }
                 viewModelScope.launch {
-                    subscribeOnGameUseCase(label = action.label)
+                    subscribeOnGameUseCase(label = label)
                 }
             }
         }

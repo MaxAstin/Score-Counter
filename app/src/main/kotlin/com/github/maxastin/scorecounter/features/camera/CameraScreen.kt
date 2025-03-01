@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
@@ -47,6 +48,7 @@ import com.github.maxastin.scorecounter.R
 import com.github.maxastin.scorecounter.common.ui.clickableWithoutIndication
 import com.github.maxastin.scorecounter.common.ui.components.button.ScoreCounterDialogButton
 import com.github.maxastin.scorecounter.common.ui.preview.BooleanProvider
+import com.github.maxastin.scorecounter.common.ui.preview.LocalePreview
 import com.github.maxastin.scorecounter.common.ui.theme.ScoreCounterTheme
 import com.github.maxastin.scorecounter.common.util.getCameraProvider
 import java.io.ByteArrayOutputStream
@@ -73,7 +75,7 @@ fun CameraScreen(navController: NavHostController) {
             viewModel.onAction(Camera.Action.ProcessImage)
         },
         onCameraError = {
-            // TODO handle camera error
+            viewModel.onAction(Camera.Action.CameraError)
         },
         modifier = Modifier.fillMaxSize()
     )
@@ -109,6 +111,7 @@ private fun Content(
                 }
                 Column(
                     modifier = Modifier
+                        .padding(32.dp)
                         .align(Alignment.Center)
                         .clip(RoundedCornerShape(16.dp))
                         .background(color = ScoreCounterTheme.colors.background)
@@ -118,21 +121,27 @@ private fun Content(
                 ) {
                     if (state.failed) {
                         Text(
-                            text = stringResource(R.string.camera_processing_failed),
-                            color = ScoreCounterTheme.colors.important,
+                            text = stringResource(R.string.camera_processing_failed_title),
+                            color = ScoreCounterTheme.colors.negative,
                             style = ScoreCounterTheme.typography.titleMedium,
                         )
+                        Text(
+                            text = stringResource(R.string.camera_processing_failed_description),
+                            color = ScoreCounterTheme.colors.onBackground,
+                            style = ScoreCounterTheme.typography.bodyMedium,
+                        )
                         Row(
-                            modifier = Modifier.align(Alignment.End),
                             horizontalArrangement = spacedBy(8.dp)
                         ) {
                             ScoreCounterDialogButton(
+                                modifier = Modifier.weight(1f),
                                 text = stringResource(R.string.common_cancel),
                                 onClick = {
                                     navController.popBackStack()
                                 }
                             )
                             ScoreCounterDialogButton(
+                                modifier = Modifier.weight(1f),
                                 text = stringResource(R.string.camera_retry),
                                 backgroundColor = ScoreCounterTheme.colors.primary,
                                 textColor = ScoreCounterTheme.colors.onSurface,
@@ -166,7 +175,12 @@ fun CameraComponent(
 ) {
     val context = LocalContext.current
     val lifecycleOwner = LocalLifecycleOwner.current
-    val previewView = remember { PreviewView(context) }
+    val previewView = remember {
+        PreviewView(context).apply {
+            implementationMode = PreviewView.ImplementationMode.COMPATIBLE
+            scaleType = PreviewView.ScaleType.FIT_CENTER
+        }
+    }
     val imageCapture = remember { ImageCapture.Builder().build() }
 
     LaunchedEffect(Unit) {
@@ -199,7 +213,7 @@ fun CameraComponent(
     Box(modifier = modifier) {
         AndroidView(
             factory = { previewView },
-            modifier = Modifier.fillMaxSize()
+            modifier = Modifier.fillMaxWidth()
         )
         Spacer(
             modifier = Modifier
@@ -260,7 +274,7 @@ private fun CameraContentPreview() {
     )
 }
 
-@ComposePreview
+@LocalePreview
 @Composable
 private fun PictureContentPreview(@PreviewParameter(BooleanProvider::class) failed: Boolean) {
     Content(

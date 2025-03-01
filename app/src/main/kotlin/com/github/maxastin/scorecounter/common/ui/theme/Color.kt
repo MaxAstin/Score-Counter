@@ -14,15 +14,14 @@ val Gray300 = Color(0xFF6D6D6D)
 val Gray200 = Color(0xFF888888)
 val Gray100 = Color(0xFFDBDBDB)
 val Blue = Color(0xFF0195F7)
-val Pink = Color(0xFFDB0D67)
-val BrightPurple = Color(0xFFCD00BD)
 val Red = Color(0xFFDD6962)
-val Amber = Color(0xFFFFBF00)
+val Green = Color(0xFF2BD587)
 
 @Stable
 class ColorScheme(
     primary: Color,
-    important: Color,
+    negative: Color,
+    positive: Color,
     icon: Color,
     iconVariant: Color,
     surface: Color,
@@ -33,14 +32,16 @@ class ColorScheme(
     background: Color,
     onBackground: Color,
     border: Color,
-    borderVariant: Color,
-    instagram: InstagramColors,
+    borderVariant: Color
 ) {
 
     var primary by mutableStateOf(primary)
         internal set
 
-    var important by mutableStateOf(important)
+    var negative by mutableStateOf(negative)
+        internal set
+
+    var positive by mutableStateOf(positive)
         internal set
 
     var icon by mutableStateOf(icon)
@@ -76,13 +77,10 @@ class ColorScheme(
     var borderVariant by mutableStateOf(borderVariant)
         internal set
 
-    var instagram by mutableStateOf(instagram)
-        internal set
-
-
     fun copy(
         primary: Color = this.primary,
-        important: Color = this.important,
+        negative: Color = this.negative,
+        positive: Color = this.positive,
         icon: Color = this.icon,
         iconVariant: Color = this.iconVariant,
         surface: Color = this.surface,
@@ -93,11 +91,11 @@ class ColorScheme(
         background: Color = this.background,
         onBackground: Color = this.onBackground,
         border: Color = this.border,
-        borderVariant: Color = this.borderVariant,
-        instagram: InstagramColors = this.instagram,
+        borderVariant: Color = this.borderVariant
     ): ColorScheme = ColorScheme(
         primary = primary,
-        important = important,
+        negative = negative,
+        positive = positive,
         icon = icon,
         iconVariant = iconVariant,
         surface = surface,
@@ -108,45 +106,6 @@ class ColorScheme(
         background = background,
         onBackground = onBackground,
         border = border,
-        borderVariant = borderVariant,
-        instagram = instagram.copy(
-            logo1 = instagram.logo1,
-            logo2 = instagram.logo2,
-            logo3 = instagram.logo3,
-            accent = instagram.accent,
-        ),
+        borderVariant = borderVariant
     )
-}
-
-@Stable
-class InstagramColors(
-    logo1: Color,
-    logo2: Color,
-    logo3: Color,
-    accent: Color,
-) {
-    var logo1 by mutableStateOf(logo1)
-        internal set
-
-    var logo2 by mutableStateOf(logo2)
-        internal set
-
-    var logo3 by mutableStateOf(logo3)
-        internal set
-
-    var accent by mutableStateOf(accent)
-        internal set
-
-    fun copy(
-        logo1: Color = this.logo1,
-        logo2: Color = this.logo2,
-        logo3: Color = this.logo3,
-        accent: Color = this.accent,
-    ): InstagramColors = InstagramColors(
-        logo1 = logo1,
-        logo2 = logo2,
-        logo3 = logo3,
-        accent = accent,
-    )
-
 }

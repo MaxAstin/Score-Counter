@@ -15,7 +15,7 @@ abstract class BaseViewModel<S : Base.State, A : Base.Action, E : Base.Event>(
     initState: () -> S
 ) : ViewModel() {
 
-    protected val mutableState = MutableStateFlow(initState())
+    private val mutableState = MutableStateFlow(initState())
     protected val currentState: S
         get() = mutableState.value
     val state: StateFlow<S> = mutableState.asStateFlow()
