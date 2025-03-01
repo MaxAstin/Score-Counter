@@ -17,8 +17,8 @@ android {
         applicationId = "com.github.maxastin.scorecounter"
         minSdk = 24
         targetSdk = 35
-        versionCode = 8
-        versionName = "0.0.8"
+        versionCode = 10
+        versionName = "0.1.0"
         multiDexEnabled = true
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
